@@ -20,7 +20,7 @@ RUN useradd -u ${uid} -g ${group} -s /bin/sh -m ${user}
 USER ${uid}:${gid}
 WORKDIR /home/buildfarm
 
-RUN wget https://github.com/bazelbuild/bazel/archive/refs/tags/4.2.3.tar.gz \
+RUN wget -q https://github.com/bazelbuild/bazel/archive/refs/tags/4.2.3.tar.gz \
     && tar xzf 4.2.3.tar.gz \
     && echo "a9ef01b744d2fdcd688dcc9ecc25ad6dffaf4a9967058303fd27a5b41670b7d7 4.2.3.tar.gz" | sha256sum -c
 WORKDIR bazel-4.2.3
