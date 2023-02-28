@@ -139,5 +139,5 @@ RUN mkdir gen/ \
 RUN bazel clean
 RUN mkdir -p build \
     && cd build \
-    && '/usr/bin/cmake' '--warn-uninitialized' '-DCMAKE_BUILD_TYPE:STRING=Release' '-GUnix Makefiles' '-DCMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH:BOOL=False' '..' \
+    && '/usr/bin/cmake' '--warn-uninitialized' '-DCMAKE_BUILD_TYPE:STRING=Release' '-GUnix Makefiles' '..' \
     && make
